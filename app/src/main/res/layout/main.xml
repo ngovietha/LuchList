@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:orientation="vertical"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:padding="5dp"--><!--tools:context=".LunchList">--><!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:orientation="horizontal">--><!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="Name"--><!--android:textColor="#03A9F4"--><!--/>--><!--<EditText--><!--android:id="@+id/name"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content" />-->
+
+<!--</LinearLayout>--><!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:orientation="horizontal">--><!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="Address"--><!--android:textColor="#03A9F4"--><!--/>--><!--<EditText--><!--android:id="@+id/addr"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content" />-->
+
+<!--</LinearLayout>--><!--<Button--><!--android:id="@+id/save"--><!--android:text="Save"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:onClick="btSaveProcess"--><!--/>--><!--</LinearLayout>-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LunchList"
+    android:background="#6340F5E6">
+
+    <TableLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:stretchColumns="1">
+
+        <TableRow>
+
+            <TextView
+                android:text="Name"
+                android:textColor="#F40363" />
+
+            <EditText
+                android:id="@+id/name"
+                android:textColor="#9C27B0" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="Address"
+                android:textColor="#F40363" />
+
+            <EditText
+                android:id="@+id/addr"
+                android:textColor="#9C27B0" />
+
+        </TableRow>
+
+        <TextView android:text="Type" />
+<TableRow>
+        <RadioGroup android:id="@+id/types">
+
+            <RadioButton
+                android:id="@+id/take_out"
+                android:checked="true"
+                android:text="Take out" />
+
+            <RadioButton
+                android:id="@+id/sit_down"
+                android:text="Sit down" />
+
+            <RadioButton
+                android:id="@+id/delivery"
+                android:text="Delivery" />
+        </RadioGroup>
+
+    <ImageView
+        android:id="@+id/iv_type"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/takeout" />
+</TableRow>
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="btSaveProcess"
+            android:text="Save" />
+
+    </TableLayout>
+
+    <ListView
+        android:id="@+id/restaurants"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/details"
+        />
+</RelativeLayout>
+
+
